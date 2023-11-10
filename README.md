@@ -1,0 +1,1 @@
+This repository contains a console-based implementation of the classic Tic Tac Toe game in Python. The game provides a simple interface for two players to take turns placing their symbols (X or O) on the board. The board is displayed in the console after each move.
