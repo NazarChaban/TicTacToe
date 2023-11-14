@@ -26,7 +26,7 @@ def display_board(BOARD):
 
 
 def display():
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print(MESSAGE)
     print('Current board:')
     display_board(BOARD)
@@ -65,17 +65,11 @@ def pos_check(pos):
         if 1 <= pos <= 9:
             if BOARD[pos-1] != ' ':
                 return 'That cell is not empty, try another cell'
-                # print('That cell is not empty, try another cell')
-                # return None
             return pos
         else:
             return 'Invalid position, must be between 1 and 9'
-            # print('Invalid position, must be between 1 and 9')
-            # return None
     except ValueError:
         return 'Invalid position, must be a number'
-        # print('Invalid position, must be a number')
-        # return None
 
 
 def TicTakToe():
